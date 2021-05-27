@@ -16,6 +16,8 @@ if len(sys.argv) < 2:
 
 account = sys.argv[1]   # first command line arg is the account name
 
+# if account is stored in PASSWORDS, copy to clipboard
+# else, notify user
 if account in PASSWORDS:
     pyperclip.copy(PASSWORDS[account])
     print('Password for ' + account + ' copied to clipboard.')
